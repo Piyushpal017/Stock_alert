@@ -2,8 +2,8 @@ import requests
 
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
-api_key = "E5C53SUTKVVO9CB1"
-API_KEY = "1c1d9afdd9a8446d9d1eed73972bc166"
+api_key = "Your_api_key"
+API_KEY = "Your_API_KEY"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
@@ -81,8 +81,8 @@ new_list = [f"{STOCK_NAME}: {up_down} {percentage} % \nHeadline: {item['title']}
 #TODO 9. - Send each article as a separate message via Twilio. 
 def telegram_bot_sendtext(bot_message):
     
-    bot_token = '8105276632:AAGqnqIHcAxJjVtqmX-ZwAXWLaQ8aIjGub4'
-    bot_chatID = '6247095465'
+    bot_token = 'Your_bot_token'
+    bot_chatID = 'your_bot_chatID'
     send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + '&parse_mode=Markdown&text=' + bot_message
 
     response = requests.get(send_text)
